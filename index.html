@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <div id="header">
@@ -27,6 +28,7 @@
         </div>
         </div>
     </div>
+<!-- about -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -43,33 +45,113 @@
                         maintainable code that drives business growth. I don't just build websites; I engineer digital experiences that perform.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Front-end <br></span>Developing website/Application</li>
-                            <li><span>Back-end <br></span>Building web/Application</li>
-                            <li><span>UI/UX<br></span>Designing web/App interfaces</li>
+                            <li><span>Front-end <br></span>HTML, CSS, JavaScript, Responsive Design</li>
+                            <li><span>Back-end <br></span>Django, MySQL, MongoDB</li>
+                            <li><span>UI/UX<br></span>Figma, Adobe applications, Canva</li>
+                            <li><span>Programming <br></span> C, C++, Python, Java </li>
+                            <li><span>Tools & Technologies <br></span>VS Code, MYSQL, Git & Github, Eclipse</li>
                         </ul>
                     </div>
-                     <div class="tab-contents">
+                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2016-2017 </span><br>Developing website/Application</li>
-                            <li><span>2017-2018</span><br> Building web/Application</li>
-                            <li><span>2018-2022</span><br> Designing web/App interfaces</li>
+                            <li><span>2015-2016 </span><br>Worked with shikhbe shobai</li>
+                            <li><span>Personal Projects</span><br>Built Portfolio Websites, Online Store Applications, Created Study Tracker App</li>
+                            <li><span>Academic Projects</span><br>JavaFX Online Store App</li>
+                            <li><span>2018-2022 </span><br>Worked with Hostinger team</li>
+
                         </ul>
-                    </div> <div class="tab-contents">
+                    </div> <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Front-end <br></span>Developing website/Application</li>
-                            <li><span>Back-end <br></span>Building web/Application</li>
-                            <li><span>UI/UX<br></span>Designing web/App interfaces</li>
+                            <li><span>2015-2016<br></span>Junior School Certificate (JSC)</li>
+                            <li><span>2018-2020<br></span>Secondary School Certificate (SSC)</li>
+                            <li><span>2020-2022<br></span>Higher Secondary Certificate (HSC)</li>
+                            <li><span>2022-present<br></span>Bachelor of Science in Computer Science & Engineering University of Asia Pacific</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Services -->
+     <div id="services">
+        <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Frontend Development</h2>
+                        <p>Build responsive and visually appealing websites using HTML, CSS, and JavaScript, ensuring smooth user experience, modern UI design, and interactive animations across all devices and screen sizes</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-database"></i>
+                        <h2>Backend Development</h2>
+                        <p>Develop secure and scalable server-side applications, manage databases, create APIs, and handle business logic to ensure smooth communication between the frontend, server, and database.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>Design clean and user-friendly application interfaces focusing on usability, visual hierarchy, and intuitive navigation to create engaging and efficient digital experiences.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+        </div>
+     </div>
+<!-- portfolio -->
+     <div id="portfolio">
+        <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/website photo.jpg" alt="">
+                <div class="layer">
+                    <h3>Online Business Website</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque et in optio incidunt amet beatae ipsum, labore perferendis aliquam hic?</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/website photo 4.jpg" alt="">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque et in optio incidunt amet beatae ipsum, labore perferendis aliquam hic?</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/image 7.webp" alt="">
+                <div class="layer">
+                    <h3>Online Grocery Application</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque et in optio incidunt amet beatae ipsum, labore perferendis aliquam hic?</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+        </div>
+     </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
