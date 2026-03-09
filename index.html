@@ -8,19 +8,22 @@
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
+<!-- header section -->
     <div id="header">
         <div class="container">
         <nav>
             <div class="logo"> 
                 Ba<span class="color-primary">r</span>i.
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <P>Full-stack Web Developer</P>
@@ -78,7 +81,7 @@
             </div>
         </div>
     </div>
-    <!-- Services -->
+<!-- Services -->
      <div id="services">
         <div class="container">
                 <h1 class="sub-title">My Services</h1>
@@ -138,7 +141,7 @@
         </div>
      </div>
 <!-- contact -->
-<div class="contact">
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -154,12 +157,13 @@
                 <a href="images/PABNA TICKET.pdf" class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form action="">
+                <form name="MY_FORM">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email"n placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -167,7 +171,6 @@
         <p>Copyright © Bari. All rights reserved.<i class="fa-solid fa-heart"></i></p>
     </div>
 </div>
-
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -183,5 +186,34 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <script>
+	    const scriptURL = 'https://script.google.com/macros/s/AKfycby0DjiWS7w-bsMkWNiDJHJFybaWiNuT_42GcWR1_lkRKRff2trI-toYlo5WJyNN1rK1/exec'
+	    const form = document.forms['MY_FORM']
+        const msg = document.getElementById("msg")
+	    form.addEventListener('submit', e => {
+		    e.preventDefault()
+		    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			    .then(response => response.json())
+			    .then(response => {
+                    msg.innerHTML="Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+			    .catch(error => console.error('Error!', error.message))
+	}
+    )
+</script>
 </body>
 </html>
