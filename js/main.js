@@ -12,7 +12,7 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-
+        // building menu tab for responsive site
         var sidemenu = document.getElementById("sidemenu");
 
         function openmenu(){
@@ -41,4 +41,3 @@
 	}
     )
 
-    
